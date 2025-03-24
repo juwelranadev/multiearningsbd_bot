@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Multi Earnings BD</title>
+  <title>iTonziFinance</title>
   
   <!-- Global Styles -->
   <style>
@@ -18,7 +18,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to bottom right, #000, #fff);
+      background: #404040;
       color: #fff;
       display: flex;
       justify-content: center;
@@ -26,63 +26,102 @@
       min-height: 100vh;
       position: relative;
       overflow-x: hidden;
-    }
-    .container {
-      background:black;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-      max-width: 90vw;
-      width: 350px;
-      text-align: center;
-      min-height: 520px;
-      margin: 60px 0 100px;
-    }
-    .container h1 {
-      font-size: 1.8em;
-      color: #00cc00;
-      margin-bottom: 20px;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    }
+    }  
+    
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 2px solid #000;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+ 
+/* Running red border for container */
+.container {
+    
+    background-image: url('https://i.ibb.co.com/S49D48yj/34101037-rm251-mind-08-f.jpg');
+        background-size: cover; /* Ensures the image covers the entire div */
+        background-position: center; /* Centers the image within the div */
+        height: 90vh; /* Optional: sets the height of the div to fill the screen */
    
-    /* earning sector starts*/
-    
-   .stats {
-            background: darkblue;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            position: relative;
-            border: 6px solid transparent;
-            animation: borderAnimation 2s infinite linear;
-        }
+  padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    max-width: 95vw;
+    width: 350px;
+    text-align: center;
+    margin: 60px 0 100px;
+    border: 3px solid lime;
+    animation: containerBorderRun 2s linear infinite;
+}
 
-        .stats p {
-            margin: 5px 0;
-            font-size: 1.2em;
-            color: white;
-            text-align:center;
-        }
+@keyframes containerBorderRun {
+    0% {
+        box-shadow: 0 0 5px lime;
+        border-color: yellow;
+    }
+    50% {
+        box-shadow: 0 0 15px blue;
+        border-color: white;
+    }
+    100% {
+        box-shadow: 0 0 5px white;
+        border-color: lime;
+    }
+}
+/* Running red border for container end */
+    
+   .container h1 {
+    font-size: 2.8em;
+    color: #00cc00;
+    margin-bottom: 0; /* Remove default bottom margin */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+} 
+    
+  /* Earning sector starts */
 
-        @keyframes borderAnimation {
-            0% {
-                border-color: yellow;
-                box-shadow: 0 0 5px yellow;
-            }
-            50% {
-                border-color: orange;
-                box-shadow: 0 0 15px orange;
-            }
-            100% {
-                border-color: yellow;
-                box-shadow: 0 0 5px yellow;
-            }
-        }
+.stats {
+    background: darkblue;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 3px solid yellow; /* Dev border yellow */
+    text-align: center;
+    animation: glowAnimation 1.5s infinite alternate; /* Animated glow */
+}
 
-    
-   /* earning statistics end */
-    
-    
+.stats p {
+    margin: 5px 0;
+    font-size: 1.5em; /* Bigger size for devs */
+    font-weight: bold; /* Bold text */
+    color: white;
+}
+
+@keyframes glowAnimation {
+    0% {
+        box-shadow: 0 0 5px yellow;
+    }
+    100% {
+        box-shadow: 0 0 20px green;
+    }
+}
+
+/* Earning statistics end */
+
+
     .progress-container {
       width: 100%;
       height: 8px;
@@ -150,9 +189,15 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 50px; /* Fixed height */
-  background: linear-gradient(to bottom, #00ff00 0%, #000000 50%);
-  color: #fff;
+ 
+   
+  background-image: url('https://i.ibb.co.com/4n5WV7Rf/34378570-v915-techi-025-l.jpg'); /* Updated image URL */
+     background-size: cover; /* Ensures the image covers the entire div */
+        background-position: center; /* Centers the image within the div */
+        height: 5vh; /* Optional: sets the height of the div to fill the screen */
+    
+ 
+  color: black;
   padding: 15px;
   font-size: 0.9em;
   text-align: center;
@@ -253,44 +298,56 @@
       margin-top: 10px;
     }
     
+   
+
     /* Bottom Container Styles */
-    .bottom-container {
-      width: 100%;
-      background: linear-gradient(45deg, #000, #f5f5f5);
-      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-      display: flex;
-      justify-content: space-around;
-      gap: 5px;
-      padding: 10px 0;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      z-index: 1000;
-    }
-
-    .bottom-button {
-      background: linear-gradient(45deg, #cc0000, #009900);
-      border: none;
-      color: #fff;
-      font-weight: bold;
-      padding: 10px 20px;
-      line-height: 40px;
-      border-radius: 8px;
-      cursor: pointer;
-      flex: 1;
-      margin: 0 5px;
-      text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .bottom-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      opacity: 0.9;
-    }
+.bottom-container {
+  width: 100%;
+  height: 60px; /* Adjusted height */
+  background: linear-gradient(to bottom, #ff0000 0%, #66ff33 100%);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  align-items: center; /* Keeps buttons centered vertically */
+}
 
     
-    /* Payment Popup Styles */
+    
+    /* Button Styles starts*/
+.bottom-button {
+  background: black;
+  border: 2px solid white; /* White border added */
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  height: 40px; /* Adjusted height */
+  line-height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1;
+  margin: 0 5px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center text inside button */
+}
+
+/* Hover Effect */
+.bottom-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
+
+ /*bottom button code end */
+      /* Payment Popup Styles */
     .payment-popup-container {
       display: none;
       position: fixed;
@@ -302,7 +359,7 @@
     }
 
     .payment-popup-popup {
-      background: linear-gradient(135deg, #4A90E2, #8E44AD);
+      background:rgba(0, 0, 0, 0.2); /*transparent color*/
       padding: 20px;
       border-radius: 12px;
       width: 100%; 
@@ -330,7 +387,7 @@
     }
 
     .payment-popup-input, .payment-popup-select {
-      width: 100%;
+      width: 80%;
       padding: 10px;
       border: 1px solid #ddd;
       border-radius: 6px;
@@ -391,29 +448,148 @@
       font-size: 14px;
       font-weight: bold;
       color: #fff;
-      background: #333;
+      background: red;
       padding: 5px 10px;
       border-radius: 6px;
       width: fit-content;
       margin: 0 auto;
       text-align: center;
-    }
+    } 
+    
+    
+.popup-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* Set width */
+  height: 100px; /* Set height */
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  animation: borderGlow 1.5s infinite alternate;
+}
+
+/* Success style */
+.popup-message.success {
+  background-color: white;
+}
+
+/* Error style */
+.popup-message.error {
+  background-color: #f44336;
+}
+
+/* Fade out effect */
+.popup-message.fade-out {
+  opacity: 0;
+}
+
+/* Animated border effect */
+@keyframes borderGlow {
+  0% {
+    border: 2px solid yellow;
+    box-shadow: 0 0 10px yellow;
+  }
+  100% {
+    border: 2px solid lime;
+    box-shadow: 0 0 10px lime;
+  }
+}
+    
+ /*maintenance on-off css STARTS*/
+  .maintenancecontainer {
+    text-align: center;
+        }
+.maintenance-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99%;
+  height: 100vh; /* Ensures the background image takes up the full height of the screen */
+  
+  background-image: url('https://i.ibb.co/rKHyVgy9/Pngtree-a-data-analyst-sitting-at-15735858.jpg');
+  background-size: cover;  /* Adjusts the image to cover the entire background */
+  background-position: center;  /* Centers the image */
+  background-repeat: no-repeat;  /* Prevents the image from repeating */
+  margin: 0;
+  
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Prevents content from overflowing */
+  border: 4px solid transparent; /* Initial border */
+  border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  border-image-slice: 1;
+  animation: borderAnimation 3s linear infinite;
+}
+
+/* Mobile-specific adjustments */
+@media screen and (max-width: 600px) {
+  .maintenance-message {
+    padding: 10px;  /* Adjust padding for smaller screens */
+  }
+}
+
+
+@keyframes borderAnimation {
+  0% {
+    border-image-source: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  }
+  25% {
+    border-image-source: linear-gradient(45deg, #00ff00, #0000ff, #ff0000, #00ff00);
+  }
+  50% {
+    border-image-source: linear-gradient(45deg, #0000ff, #ff0000, #00ff00, #0000ff);
+  }
+  75% {
+    border-image-source: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  }
+  100% {
+    border-image-source: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  }
+}
+
+  .maintenancecontent {
+            display: none;
+        }
+   
   </style>
   
   <!-- Monetag Ads Script -->
   <script src="//whephiwums.com/sdk.js" data-zone="9041728" data-sdk="show_9041728"></script>
 </head>
 <body>
-  <div class="notice">
+<div class="maintenancecontainer">
+        <!-- Maintenance message will be shown or hidden based on JavaScript -->
+        <div id="maintenance-message" class="maintenance-message">
+        <h1>App is under maintenance</h1>
+        <p>We're currently updating our app. Please try again later.</p>
+        </div>
+
+<!-- Main content -->
+<div id="maintenancecontent" class="maintenancecontent">
+       
+<div class="notice">
     <span>NOTICE:অনুগ্রহ করে লক্ষ্য করুন যে সর্বাধিক বিজ্ঞাপনের সীমা হলো প্রতিদিন 300 টি। সীমা পূরণ করার পর ১২ ঘণ্টার কুলডাউন শুরু হবে, এরপর আপনি আরও বিজ্ঞাপন দেখতে পারবেন।</span>
-  </div>
+</div>
+  
+
+  
+<div class="container">
+       
+  <div class="logo">
+            <img src="https://i.ibb.co/60Jzx0KX/complete-0-EB4-EAC6-8-F81-4-A4-B-BA22-D1-CAE9933-FF6.png" alt="Logo">
+  
+  </div> <h1>iTonzi</h1>
   
   
-  <div class="container">
-    <h1>Multi Earnings BD</h1>
-    
     <div class="stats">
-      <p>TOTAL $ZK: <span id="earned-points">0</span></p>
+      <p>TOTAL $ZI: <span id="earned-points">0</span></p>
       <p>DAILY: <span id="watched-ads">0</span> / 300</p>
       
       <div id="timer" class="timer"></div>
@@ -446,7 +622,7 @@
       <h2 class="payment-popup-h2">PAYMENT REQUEST</h2>
 
       <div class="payment-popup-form-group">
-        <label class="payment-popup-label">AVAILABLE $ZK:</label>
+        <label class="payment-popup-label">WITHDRAWABLE $ZI:</label>
         <span class="payment-popup-points" id="availablePoints">0</span>
       </div>
 
@@ -502,8 +678,32 @@
       </div>
     </div>
   </div>
+ </div>
+</div>
+
   
-  <script>
+  
+<script>
+      //app maintenance status show up starts.............[maintenance]
+     
+       // Directly set the maintenanceMode variable here
+        var maintenanceMode = "off"; // Set to "on" for maintenance or "off" for normal
+
+        // Control visibility based on maintenanceMode value
+        if (maintenanceMode === "on") {
+            // Show maintenance message and hide regular content
+            document.getElementById('maintenance-message').style.display = 'block';
+            document.getElementById('maintenancecontent').style.display = 'none';
+        } else {
+            // Show regular content and hide maintenance message
+            document.getElementById('maintenance-message').style.display = 'none';
+            document.getElementById('maintenancecontent').style.display = 'block';
+        }
+    
+     //app maintenance status show up ends.................[maintenance]
+     
+     
+     
     // Global variables and initialization
     let watchedAdsCount = 0;
     let earnedPoints = 0.00;
@@ -608,22 +808,46 @@
       }
     }
     
-    // Auto Ads
-    function startAutoAds() {
-      autoAdInterval = setInterval(watchAd, 5000);
-      stopAutoButton.disabled = false;
-      autoAdButton.disabled = true;
-      autoWatchCount++;
-      localStorage.setItem('autoWatchCount', autoWatchCount);
-    }
     
-    // Stop Auto Ads
-    function stopAutoAds() {
-      clearInterval(autoAdInterval);
-      stopAutoButton.disabled = true;
-      autoAdButton.disabled = false;
-    }
+    // [[[[[ auto ads button enable or disable script]]]]]
     
+ let autoAdsEnabled = false; // [[[Set this to true or false to enable or disable auto ads]]]
+
+function showAutoAdsPopup(message) {
+  const autoAdsPopup = document.createElement('div');
+  autoAdsPopup.innerHTML = `<div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; background: #333; color: #fff; border-radius: 10px; box-shadow: 0 0 15px rgba(0,0,0,0.5); z-index: 1000;">
+    ${message}<br>
+    <button style='margin-top: 10px; padding: 5px 10px; border: none; background: #f44336; color: #fff; cursor: pointer;' onclick="this.parentElement.remove()">OK</button>
+    <button style='margin-top: 10px; margin-center: 5px; padding: 5px 10px; border: none; background: #4CAF50; color: #fff; cursor: pointer;' onclick="window.location.href='https://t.me/mdzikrulislamjuwel'">Get Premium</button>
+  </div>`;
+  document.body.appendChild(autoAdsPopup);
+
+  // notice popup close after 5 seconds
+  setTimeout(() => autoAdsPopup.remove(), 5000);
+}
+
+function startAutoAds() {
+  if (!autoAdsEnabled) {
+    showAutoAdsPopup("Auto ads are currently disabled.");
+    return; // Block auto ads if disabled
+  }
+
+  autoAdInterval = setInterval(watchAd, 5000);
+  stopAutoButton.disabled = false;
+  autoAdButton.disabled = true;
+  autoWatchCount++;
+  localStorage.setItem('autoWatchCount', autoWatchCount);
+}
+
+function stopAutoAds() {
+  clearInterval(autoAdInterval);
+  stopAutoButton.disabled = true;
+  autoAdButton.disabled = false;
+}
+
+//auto ads button enable or disable script ends
+   
+  
     // Show Rewarded Ad with cooldown
     function showMonetagAd() {
       const now = new Date().getTime();
@@ -807,23 +1031,24 @@
 
       // Create message for Telegram
       const message = `🔔 New Payment Request\n\n` +
-                     `💰 Withdrawal Amount: ${amount} $ZK\n` +
+                     `💰 Withdrawal Amount: ${amount} $ZI\n` +
                      `💳 Payment Type: ${paymentTypeValue}\n` +
                      `🏦 Payment Method: ${paymentMethod}\n` +
                      `📱 ${paymentTypeValue === 'BDT' ? 'Phone Number' : 'UID'}: ${accountNumber}\n` +
                      `\n📊 User Statistics:\n` +
-                     `⭐ Current Balance: ${earnedPoints.toFixed(2)} $ZK\n` +
-                     `💫 Balance After Withdrawal: ${(earnedPoints - amount).toFixed(2)} $ZK\n` +
+                     `⭐ Current Balance: ${earnedPoints.toFixed(2)} $ZI\n` +
+                     `💫 Balance After Withdrawal: ${(earnedPoints - amount).toFixed(2)} $ZI\n` +
                      `\n📈 Today's Activity:\n` +
                      `👁 Ads Watched: ${adsWatchedToday}/${MAX_DAILY_ADS}\n` +
-                     `💎 $ZK Earned: ${pointsEarnedToday}\n` +
+                     `💎 $ZI Earned: ${pointsEarnedToday}\n` +
                      `📝 Remaining Ads: ${remainingAdsToday}\n` +
-                     `✨ Potential $ZK: ${potentialEarningsToday}\n` +
+                     `✨ Potential $ZI: ${potentialEarningsToday}\n` +
                      `\n⚙️ System Info:\n` +
-                     `- $ZK Per Ad: ${POINTS_PER_AD}\n` +
+                     `- $ZI Per Ad: ${POINTS_PER_AD}\n` +
                      `- Daily Ad Limit: ${MAX_DAILY_ADS}\n` +
-                     `\n⏰ Request Time: ${new Date().toLocaleString()}\n` +
-                     `👤 Username: ${localStorage.getItem('username') || 'Not provided'}`;
+                      `\n⏰ Request Time: ${new Date().toLocaleString()}\n` +
+                     `\nধৈর্য ধরুন, পেমেন্ট পেয়ে যাবেন। ধন্যবাদ।\n` +
+                     `💥 Multi Earnings BD System 💥`;
 
       try {
         // Send to Telegram
@@ -860,17 +1085,32 @@
           bdtOptions.style.display = 'none';
           usdtOptions.style.display = 'none';
           
-          // Close popup and show success message
-          document.getElementById('popupContainer').style.display = 'none';
-          alert('Payment request submitted successfully! Our team will process it shortly.');
-        } else {
-          throw new Error(`Failed to send payment request: ${responseData.description || 'Unknown error'}`);
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        alert('Error submitting payment request. Please try again later or contact support.');
-      }
-    });
+        
+   // payment request information submitted popup messages
+          
+function showPopupMessage(message, type = 'success') {
+  const popup = document.createElement('div');
+  popup.textContent = message;
+  popup.className = `popup-message ${type}`;
+  document.body.appendChild(popup);
+
+  setTimeout(() => popup.remove(), 5000);
+}
+
+// Close popup and show success message
+document.getElementById('popupContainer').style.display = 'none';
+showPopupMessage('Payment request submitted successfully! Our team will process it shortly.', 'success');
+
+} else {
+  throw new Error(`Failed to send payment request: ${responseData.description || 'Unknown error'}`);
+}
+} catch (error) {
+  console.error('Error:', error);
+  showPopupMessage('Error submitting payment request. Please try again later or contact support.', 'error');
+}
+});
+   // payment request submissions success or error popup message ends
+
   </script>
 </body>
 </html>
